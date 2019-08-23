@@ -1,0 +1,171 @@
+import java.util.Scanner;
+
+public class a {
+	
+	String input;
+	String output;
+	
+	public static void main(String[] args) {
+		Scanner Leer = new Scanner(System.in);
+		while(true) {
+			System.out.println();
+			System.out.println("ingrese el verbo y ingrese la conjugacion: P A F");
+			String palabra = Leer.next();
+			String termino = Leer.next();
+			conjugarVerbo(palabra, termino);
+		}
+	}
+	public static void conjugarVerbo(String palabra, String Termino) {
+		if(Termino.equalsIgnoreCase("P")) {
+			conjugarP(palabra);
+		}
+		else if(Termino.equalsIgnoreCase("A")) {
+			conjugarA(palabra);
+
+		}
+		else if(Termino.equalsIgnoreCase("F")) {
+			conjugarF(palabra);
+
+		}
+		else if(Termino.equalsIgnoreCase("t")) {
+			System.exit(0);
+		}
+	}
+	
+	
+	public static void conjugarP(String P) {
+		int tamaño = P.length();
+		String terminacion = P.substring((tamaño-2),tamaño);
+		String Palabra = P.substring(0,tamaño-2);
+		if(terminacion.equalsIgnoreCase("ar")) {
+			String yo = "yo " +Palabra.concat("o");
+			String tu = "tu " +Palabra.concat("as");
+			String el = "el" + Palabra.concat("a");
+			String nosotros = "nosotros "+Palabra.concat("amos");
+			String vosotros = "vosotros "+Palabra.concat("ais");
+			String ustedes = "ustedes " +Palabra.concat("an");
+			String conjugar [] = {yo,tu,el,nosotros,vosotros,ustedes};
+			for(int i =0;i<conjugar.length;i++){
+				System.out.println(conjugar[i]);
+			}
+		}
+		else if(terminacion.equalsIgnoreCase("er")) {
+			String yo = "yo "+Palabra.concat("o");
+			String tu = "tu " +Palabra.concat("es");
+			String el = "el " +Palabra.concat("e");
+			String nosotros = "nosotros "+Palabra.concat("emos");
+			String vosotros = "vosotros " +Palabra.concat("eis");
+			String ustedes = "ustedes " +Palabra.concat("en");
+			String conjugar [] = {yo,tu,el,nosotros,vosotros,ustedes};
+			for(int i =0;i<conjugar.length;i++){
+				System.out.println(conjugar[i]);
+			}	
+		}
+		else if(terminacion.equalsIgnoreCase("ir")){
+			String yo = "yo "+Palabra.concat("o");
+			String tu = "tu " +Palabra.concat("es");
+			String el = "el " +Palabra.concat("e");
+			String nosotros = "nosotros "+Palabra.concat("imos");
+			String vosotros = "vosotros " +Palabra.concat("is");
+			String ustedes = "ustedes " +Palabra.concat("en");
+			String conjugar [] = {yo,tu,el,nosotros,vosotros,ustedes};
+			for(int i =0;i<conjugar.length;i++){
+				System.out.println(conjugar[i]);
+			}
+			
+		}
+		else {
+			System.out.println("No es un verbo conjugable");
+		}
+		
+	}
+	private static void conjugarA(String A) {
+		int tamaño = A.length();
+		String terminacion = A.substring((tamaño-2),tamaño);
+		String Palabra = A.substring(0,tamaño-2);
+		if(terminacion.equalsIgnoreCase("ar")) {
+			String yo = "yo " +Palabra.concat("e");
+			String tu = "tu " +Palabra.concat("aste");
+			String el = "el" + Palabra.concat("o");
+			String nosotros = "nosotros "+Palabra.concat("amos");
+			String vosotros = "vosotros "+Palabra.concat("asteis");
+			String ustedes = "ustedes " +Palabra.concat("arom");
+			String conjugar [] = {yo,tu,el,nosotros,vosotros,ustedes};
+			for(int i =0;i<conjugar.length;i++){
+				System.out.println(conjugar[i]);
+			}
+		}
+		else if(terminacion.equalsIgnoreCase("er")) {
+			String yo = "yo "+Palabra.concat("i");
+			String tu = "tu " +Palabra.concat("iste");
+			String el = "el " +Palabra.concat("io");
+			String nosotros = "nosotros "+Palabra.concat("imos");
+			String vosotros = "vosotros " +Palabra.concat("isteis");
+			String ustedes = "ustedes " +Palabra.concat("ieron");
+			String conjugar [] = {yo,tu,el,nosotros,vosotros,ustedes};
+			for(int i =0;i<conjugar.length;i++){
+				System.out.println(conjugar[i]);
+			}	
+		}
+		else if(terminacion.equalsIgnoreCase("ir")){
+			String yo = "yo "+Palabra.concat("i");
+			String tu = "tu " +Palabra.concat("iste");
+			String el = "el " +Palabra.concat("io");
+			String nosotros = "nosotros "+Palabra.concat("imos");
+			String vosotros = "vosotros " +Palabra.concat("isteis");
+			String ustedes = "ustedes " +Palabra.concat("ieron");
+			String conjugar [] = {yo,tu,el,nosotros,vosotros,ustedes};
+			for(int i =0;i<conjugar.length;i++){
+				System.out.println(conjugar[i]);
+			}
+		}	
+		else {
+			System.out.println("No es un verbo conjugable");
+		}
+	}
+	private static void  conjugarF(String F) {
+		int tamaño = F.length();
+		String terminacion = F.substring((tamaño-2),tamaño);
+		String Palabra = F;
+		if(terminacion.equalsIgnoreCase("ar")) {
+			String yo = "yo " +Palabra.concat("e");
+			String tu = "tu " +Palabra.concat("as");
+			String el = "el" + Palabra.concat("a");
+			String nosotros = "nosotros "+Palabra.concat("amos");
+			String vosotros = "vosotros "+Palabra.concat("eis");
+			String ustedes = "ustedes " +Palabra.concat("an");
+			String conjugar [] = {yo,tu,el,nosotros,vosotros,ustedes};
+			for(int i =0;i<conjugar.length;i++){
+				System.out.println(conjugar[i]);
+			}
+		}
+		else if(terminacion.equalsIgnoreCase("er")) {
+			String yo = "yo "+Palabra.concat("e");
+			String tu = "tu " +Palabra.concat("as");
+			String el = "el " +Palabra.concat("a");
+			String nosotros = "nosotros "+Palabra.concat("emos");
+			String vosotros = "vosotros " +Palabra.concat("eis");
+			String ustedes = "ustedes " +Palabra.concat("an");
+			String conjugar [] = {yo,tu,el,nosotros,vosotros,ustedes};
+			for(int i =0;i<conjugar.length;i++){
+				System.out.println(conjugar[i]);
+			}	
+		}
+		else if(terminacion.equalsIgnoreCase("ir")){
+			String yo = "yo "+Palabra.concat("e");
+			String tu = "tu " +Palabra.concat("as");
+			String el = "el " +Palabra.concat("a");
+			String nosotros = "nosotros "+Palabra.concat("emos");
+			String vosotros = "vosotros " +Palabra.concat("eis");
+			String ustedes = "ustedes " +Palabra.concat("an");
+			String conjugar [] = {yo,tu,el,nosotros,vosotros,ustedes};
+			for(int i =0;i<conjugar.length;i++){
+				System.out.println(conjugar[i]);
+			}
+		}	
+		else {
+			System.out.println("No es un verbo conjugable");
+		}
+	}
+
+}
